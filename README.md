@@ -31,6 +31,13 @@ npm run dev                    # backend  http://localhost:3003
 cd frontend && npm run dev     # frontend http://localhost:5173 (proxies /api)
 ```
 
+Production build, served by the backend from one port:
+
+```bash
+npm run build                          # builds frontend/dist
+MONGODB_URI=... npm start              # http://localhost:3003
+```
+
 In production (`NODE_ENV=production`) `MONGODB_URI` is required and the
 backend serves the built frontend from `frontend/dist`.
 
