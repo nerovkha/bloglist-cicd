@@ -55,7 +55,7 @@ pull request to `main`:
 | `test` | lint backend + frontend, backend tests, frontend tests, frontend build |
 | `e2e` | Playwright tests against the built app |
 | `deploy` | pushes to `main` only: `flyctl deploy`, then a `/health` check |
-| `tag_release` | after a deploy: bumps the patch version tag (`v1.0.x`) |
+| `tag_release` | after a deploy: bumps the patch version tag (`v0.0.1`, `v0.0.2`, …) |
 
 Pull requests only run `test` and `e2e`. Put `#skip` in a commit message to
 skip deploying and tagging for that push.
