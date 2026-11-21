@@ -73,3 +73,16 @@ also be started by hand from the Actions tab.
 Secrets: the GitHub repo has only `FLY_API_TOKEN`, a deploy token for this
 one app. `MONGODB_URI` and `SECRET` (the JWT key) are Fly secrets and never
 in git.
+
+## Protected main branch
+
+`main` is protected (exercise 11.21):
+
+- changes land only through pull requests,
+- a pull request needs one approving review, and the `test` and `e2e`
+  checks must pass before it can be merged,
+- the rules apply to administrators too, and force pushes and branch
+  deletion are blocked.
+
+Workflow: create a branch, push it, open a pull request to `main`, wait
+for the checks and a review, then merge. The merge to `main` deploys.
