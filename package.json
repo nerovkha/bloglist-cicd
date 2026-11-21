@@ -1,0 +1,33 @@
+{
+  "name": "bloglist-cicd",
+  "version": "1.0.0",
+  "description": "Full Stack Open bloglist (parts 4-5) with its own CI/CD pipeline (part 11, exercise 11.20)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node index.js",
+    "dev": "cross-env NODE_ENV=development node --watch index.js",
+    "start:test": "cross-env NODE_ENV=test node index.js",
+    "test": "cross-env NODE_ENV=test node --test --test-concurrency=1 \"tests/**/*.test.js\"",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb-memory-server": "^10.2.12",
+    "mongoose": "^8.20.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "cross-env": "^10.1.0",
+    "eslint": "^10.8.0",
+    "globals": "^17.7.0",
+    "supertest": "^7.1.4"
+  },
+  "allowScripts": {
+    "bcrypt@6.0.0": true
+  }
+}
